@@ -6,11 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  evenElements = [];
+  oddElements = [];
   onStartedGame(gameData: { counter: number}) {
     if (gameData.counter % 2) {
-      console.log('even')
+      this.evenElements.push(gameData.counter);
     } else {
-      console.log('odd')
+      this.oddElements.push(gameData.counter);
     }
   }
 }
